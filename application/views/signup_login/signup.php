@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-2 col-md-3 col-lg-3"></div>
-    <div class="col-sm-12 col-md-6 col-lg-6">
+    <div class="col-sm-12 col-md-6 col-lg-6" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);">
       <form>
         <div class="scontainer">
           <h1>Sign Up</h1>
