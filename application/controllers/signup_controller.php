@@ -38,4 +38,19 @@ class signup_controller extends CI_Controller {
 			return true;
 		}
 	}
+	public function form_validate(){
+		if(isset($_POST['signup_submit'])){
+			$psw=$_POST['psw'];
+			$psw_repeat=$_POST['psw-repeat'];
+			if($psw==$psw_repeat){
+				$this->load->model("signup_model");
+				$send_data= array(
+					'uname' => $this->input->post('uname'),
+					'uemail' => $this->input->post('uemail'),
+					'upassword' => $psw,
+					 );
+				$this->signup_model->index($send_data);
+			}
+		}
+	}
 }

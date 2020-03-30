@@ -2,17 +2,17 @@
   <div class="row">
     <div class="col-sm-2 col-md-3 col-lg-3"></div>
     <div class="col-sm-12 col-md-6 col-lg-6" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);">
-      <form>
+      <form action="<?php echo base_url() ?>signup_controller/form_validate" method="post">
         <div class="scontainer">
           <h1>Sign Up</h1>
           <p>Please fill in this form to create an account.</p>
           <hr>
 
           <label for="email"><b>Your Name</b></label>
-          <input type="text" placeholder="Enter Name" name="email" required>
+          <input type="text" placeholder="Enter Name" name="uname" required>
 
           <label for="email"><b>Email</b></label>
-          <input type="text" placeholder="Enter Email" name="email" required>
+          <input type="text" placeholder="Enter Email" name="uemail" required>
 
           <label for="psw"><b>Password</b></label>
           <input type="password" placeholder="Enter Password" name="psw" required>
@@ -25,7 +25,7 @@
 
           <div class="clearfix">
             <button type="button" class="sbutton cancelbtn">Cancel</button>
-            <button type="submit" class="sbutton signupbtn">Sign Up</button>
+            <button type="submit" class="sbutton signupbtn" name="signup_submit">Sign Up</button>
           </div>
         </div>
       </form>
