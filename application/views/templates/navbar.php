@@ -6,11 +6,11 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#" style="color:white;">OpPoll</a>
+      <a class="navbar-brand" href="<?php echo base_url() ?>" style="color:white;">OpPoll</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li><a href="#" style="color:white;">Home</a></li>
+        <li><a href="<?php echo base_url() ?>" style="color:white;">Home</a></li>
         <li><a href="#" style="color:white;">Create a Poll</a></li>
         <li><a href="#" style="color:white;">Vote Now</a></li>
       </ul>
