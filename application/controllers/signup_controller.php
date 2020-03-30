@@ -18,16 +18,29 @@ class signup_controller extends CI_Controller {
 			$this->load->view('templates/footer');
 		}
 	}
-	public function login()
+	// public function login()
+	// {
+	// 	if($this->check_session()){
+	// 		redirect(base_url()."profile");
+	// 	}else{
+	// 		$data['title']='OpPoll | Login';
+	// 		$data['stylesheet']='signup_login_style.css';
+	// 		$this->load->view('templates/header',$data);
+	// 		$this->load->view('templates/navbar');
+	// 		$this->load->view('signup_login/login');
+	// 		$this->load->view('templates/footer');
+	// 	}
+	// }
+	public function login_view()
 	{
 		if($this->check_session()){
 			redirect(base_url()."profile");
 		}else{
-			$data['title']='OpPoll | Login';
-			$data['stylesheet']='signup_login_style.css';
+			$data['title']='Login';
+			$data['stylesheet']='login_view_style.css';
 			$this->load->view('templates/header',$data);
 			$this->load->view('templates/navbar');
-			$this->load->view('signup_login/login');
+			$this->load->view('signup_login/login_view');
 			$this->load->view('templates/footer');
 		}
 	}
