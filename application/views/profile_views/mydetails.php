@@ -20,10 +20,10 @@
 
         <div class="scontainer">
           <label for="uname"><b>Name</b></label>
-          <input type="text" placeholder="<?php ?>" name="uname" required disabled>
+          <input type="text" placeholder="<?php echo $_SESSION['username']; ?>" name="uname" required disabled>
 
           <label for="psw"><b>Email</b></label>
-          <input type="text" placeholder="" name="psw" required disabled>
+          <input type="text" placeholder="<?php echo $_SESSION['useremail']; ?>" name="psw" required disabled>
               
         </div>
         <br><br>

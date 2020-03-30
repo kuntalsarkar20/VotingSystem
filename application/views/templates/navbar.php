@@ -1,3 +1,9 @@
+<?php
+$loginbtn="Log In";
+if(isset($_SESSION['username'])){
+  $loginbtn=$_SESSION['username'];
+}
+?>
 <nav class="navbar navbar-inverse" style="background-color: #00e600;">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -16,7 +22,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="<?php echo base_url() ?>signup" style="color:white;"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="<?php echo base_url() ?>login" style="color:white;"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a href="<?php echo base_url() ?>login" style="color:white;"><span class="glyphicon glyphicon-log-in"></span> <?php echo $loginbtn; ?></a></li>
       </ul>
     </div>
   </div>

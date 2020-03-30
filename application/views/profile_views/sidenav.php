@@ -5,6 +5,6 @@
 	  <li><a class="sli-a" href="#home">My Details</a></li>
 	  <li><a class="sli-a" href="#news">Create New Poll</a></li>
 	  <li><a class="sli-a" href="#contact">My Polls</a></li>
-	  <li><a class="sli-a" href="#about">Log Out</a></li>
+	  <li><a class="sli-a" href="<?php echo base_url() ?>profile_controller/logout">Log Out</a></li>
 	</ul>
 </div>
