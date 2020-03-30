@@ -16,7 +16,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="<?php echo base_url() ?>signup" style="color:white;"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="#" style="color:white;"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a href="<?php echo base_url() ?>login" style="color:white;"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       </ul>
     </div>
   </div>
