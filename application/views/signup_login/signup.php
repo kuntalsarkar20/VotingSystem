@@ -36,7 +36,7 @@
           <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
 
           <div class="clearfix">
-            <button type="button" class="sbutton cancelbtn">Cancel</button>
+            <a href="<?php echo base_url() ?>"><button type="button" class="sbutton cancelbtn">Cancel</button></a>
             <button type="submit" class="sbutton signupbtn" name="signup_submit">Sign Up</button>
           </div>
         </div>

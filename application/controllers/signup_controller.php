@@ -71,7 +71,22 @@ class signup_controller extends CI_Controller {
 				'uemail' =>$this->input->post('uemail') , 
 				'upassword' =>$this->input->post('psw') , 
 			);
-			$this->signup_model->validate_user_login_details($login_data);
+			$login_result['data']=$this->signup_model->validate_user_login_details($login_data);
+			if(!empty($login_result['data'])){ //found the data on database
+				if(sizeof($login_result['data'])==1){	//if only 1 result found
+					foreach ($login_result['data'] as $row) {
+						$_SESSION['useremail']=$row['uemail'];
+						$_SESSION['username']=$row['uname'];
+					}
+					redirect(base_url()."profile");
+				}else{	//if more than 1 record found,redirected to login page
+					redirect(base_url()."login/wrong-credential");
+				}
+			}else{	//if null returned from db,redirected to login page
+				redirect(base_url()."login/wrong-credential");
+			}
+		}else{ 		//if someone forcefully tries to access this
+			redirect(base_url()."login");
 		}
 	}
 }

@@ -10,13 +10,9 @@ class signup_model extends CI_Model{
 		}
 	}
 	function validate_user_login_details($login_details){
-		$got_result=$this->db->query('select uid from users where uemail="'.$login_details['uemail'].'" and upassword="'.$login_details['upassword'].'"');
-		foreach ($got_result -> result() as $row) {
-			echo $row->uid;
-		}
+		$got_result=$this->db->query('select uid,uname,uemail from users where uemail="'.$login_details['uemail'].'" and upassword="'.$login_details['upassword'].'"');
+		return $got_result->result_array();
 	}
 }
-
-
 
 ?>

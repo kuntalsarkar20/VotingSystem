@@ -1,4 +1,16 @@
 <div class="container">
+<?php
+  if($this->uri->segment(2)=="wrong-credential"){
+    echo '<div class="col-sm-12 col-md-12 col-lg-12" style="background-color: lightblue;padding:10px;" id="showerrormsg">
+    <button onclick="closediv()" style="float:right;color:red;">X</button>
+    <h4>Username or Password is incorrect. Please Check Your details and try again.</h4>
+  </div>';
+  }
+  ?>
+  <script type="text/javascript">
+  function closediv(){
+    document.getElementById('showerrormsg').style.display = "none";
+  }
 </script>
   <div class="row">
     <div class="col-sm-2 col-md-3 col-lg-3"></div>
@@ -20,8 +32,8 @@
         </div>
 
         <div class="scontainer" style="background-color:#f1f1f1">
-          <button type="button" class="sbutton logincancelbtn">Cancel</button>
-          <span class="psw">Forgot <a href="#">password?</a></span>
+          <a href="<?php echo base_url() ?>"><button type="button" class="sbutton logincancelbtn">Cancel</button></a>
+          <!-- <span class="psw">Forgot <a href="#">password?</a></span> -->
         </div>
         <br><br>
       </form>
